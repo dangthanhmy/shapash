@@ -1091,7 +1091,7 @@ class SmartExplainer:
                 port = 8050
             host_name = get_host_name()
             server_instance = CustomThread(
-                target=lambda: self.smartapp.app.run_server(debug=False, host=host, port=port)
+                target=lambda: self.smartapp.app.run(debug=False, host=host, port=port)
             )
             if host_name is None:
                 host_name = host
